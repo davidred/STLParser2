@@ -25,4 +25,4 @@ facet normal ni nj nk
 endfacet
 ```
 
-The STL file is parsed and each facet normal increments the number of faces by one. Vertices are kept track of in a key-lookup. Any unique vertex encountered increments the number of vertices by one. Once the end of the file is reached, the number of vertices and faces is returned.
+The STL file is parsed and each time a facet normal line is encountered, the number of faces is incremented by one. Vertices are kept track of in a key-lookup hash. Any unique vertex encountered increments the number of vertices by one. Once the end of the file is reached, the number of vertices and faces is returned.
