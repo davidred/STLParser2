@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/stl_parser'
+
+if __FILE__ == $PROGRAM_NAME
+  puts "Parsing file 'data/cube.stl'"
+  p = STLParser.new('data/cube.stl')
+  result = p.parse
+  puts "There are #{result[0]} faces and #{result[1]} vertices"
+end
